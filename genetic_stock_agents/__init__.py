@@ -10,7 +10,7 @@ subprocess.check_call([sys.executable, '-m', 'pip', 'install', 'yfinance'])
 import yfinance as yf
 from scipy import stats
 
-
+ticker = list(pd.read_csv('https://github.com/datasets/s-and-p-500-companies/raw/master/data/constituents.csv')['Symbol'])
 
 def get_data(tickers, begin_date=None,end_date=None,window=None):
   """
